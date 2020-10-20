@@ -28,8 +28,8 @@ test:
   commands:
     - test -f $PREFIX/lib/libcharls${SHLIB_EXT}     # [unix]
     - test -f $PREFIX/include/charls/charls.h       # [unix]
-    - if not exist %LIBRARY_LIB%\\charls-2-x64.lib exit 1       # [win]
-    - if not exist %LIBRARY_BIN%\\charls-2-x64.dll exit 1       # [win]
+    - if not exist %LIBRARY_LIB%\\charls-2-x64.lib exit 1       # [win64]
+    - if not exist %LIBRARY_BIN%\\charls-2-x64.dll exit 1       # [win64]
     - if not exist %LIBRARY_INC%\\charls\\charls.h exit 1       # [win]
 
 about:

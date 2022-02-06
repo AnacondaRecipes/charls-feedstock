@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.3.3" %}
 
 package:
   name: charls
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/team-charls/charls/archive/{{ version }}.tar.gz
-  sha256: e1d7dd70cd9d6d46de5abbf22278dc8169707995a21e8bf705f5746c04c76891
+  sha256: e7f32f13314cd81dece517b1c6c7dd74d98872f56d364ba20c3419c5cb86d459
 
 build:
   skip: true  # [win and vc<14]

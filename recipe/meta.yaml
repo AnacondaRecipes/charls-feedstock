@@ -1,5 +1,5 @@
 {% set name = "charls" %}
-{% set version = "2.4.2" %}
+{% set version = "2.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/team-{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: d1c2c35664976f1e43fec7764d72755e6a50a80f38eca70fcc7553cad4fe19d9
+  sha256: bbf67d51446a98eb8fc98c9c6de49a2605c709d3a14ba39f09a09f8e57527099
 
 build:
   skip: true  # [win and vc<14]
@@ -28,11 +28,11 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libcharls${SHLIB_EXT}     # [unix]
-    - test -f $PREFIX/include/charls/charls.h       # [unix]
-    - if not exist %LIBRARY_LIB%\\charls-2-x64.lib exit 1       # [win64]
-    - if not exist %LIBRARY_BIN%\\charls-2-x64.dll exit 1       # [win64]
-    - if not exist %LIBRARY_INC%\\charls\\charls.h exit 1       # [win]
+    - test -f $PREFIX/lib/libcharls${SHLIB_EXT}  # [unix]
+    - test -f $PREFIX/include/charls/charls.h  # [unix]
+    - if not exist %LIBRARY_LIB%\\charls-2-x64.lib exit 1  # [win64]
+    - if not exist %LIBRARY_BIN%\\charls-2-x64.dll exit 1  # [win64]
+    - if not exist %LIBRARY_INC%\\charls\\charls.h exit 1  # [win]
 
 about:
   home: https://github.com/team-charls/charls
@@ -41,7 +41,7 @@ about:
   license_file: LICENSE.md
   summary: Lossless / near-lossless image compression / decompression
   description: |
-    CharLS is a C++ implementation of the JPEG-LS standard for lossless and near-lossless image compression and decompression. 
+    CharLS is a C++ implementation of the JPEG-LS standard for lossless and near-lossless image compression and decompression.
     JPEG-LS is a low-complexity image compression standard that matches JPEG 2000 compression ratios.
   dev_url: https://github.com/team-charls/charls
   doc_url: https://github.com/team-charls/charls/tree/main/doc
